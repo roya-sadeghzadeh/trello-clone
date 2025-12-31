@@ -1,0 +1,68 @@
+// ============================================
+// SCSS MIXINS
+// ============================================
+
+@import './variables';
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Text utilities
+@mixin text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// Interactive states
+@mixin interactive-element {
+  cursor: pointer;
+  transition: background-color $transition-base $transition-ease,
+              color $transition-base $transition-ease;
+
+  &:hover {
+    background-color: $color-bg-hover;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-bg-hover;
+  }
+}
+
+// Scrollbar styling
+@mixin custom-scrollbar($width: 8px, $track-color: $color-bg-secondary, $thumb-color: $color-gray-400) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+    border-radius: $width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    border-radius: $width;
+
+    &:hover {
+      background: darken($thumb-color, 10%);
+    }
+  }
+}

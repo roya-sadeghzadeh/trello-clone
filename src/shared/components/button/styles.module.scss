@@ -1,0 +1,58 @@
+@import '../../../../styles/index';
+
+.button {
+  padding: $spacing-sm $spacing-lg;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  transition: all $transition-base;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.primary {
+  padding: $spacing-sm $spacing-md;
+  color: $color-text-inverse;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-base;
+  border: none;
+  background-color: rgb(90, 172, 68);
+  box-shadow: rgb(63, 111, 33) 0px 1px 0px 0px;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: background-color $transition-base $transition-ease;
+
+  &:hover {
+    background-color: rgb(81, 152, 57);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.secondary {
+  background: $color-border-secondary;
+  color: $color-text-primary;
+
+  &:hover {
+    background: $color-border-primary;
+  }
+}
+
+.danger {
+  background: rgb(207, 81, 61);
+  color: $color-text-inverse;
+
+  &:hover {
+    background: #e55348;
+  }
+}

@@ -1,0 +1,94 @@
+@import '../../../../../styles/index';
+
+.boardView {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: $spacing-lg 0 0 0;
+  background-color: rgb(46, 126, 175);
+  transition: background-color $transition-base $transition-ease;
+}
+
+.header {
+  margin-bottom: $spacing-lg;
+  padding: 0 $spacing-lg;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  h1 {
+    max-width: calc(-9rem + 100vw);
+    margin: 0;
+    padding: $spacing-sm;
+    font-size: 1.3rem;
+    color: $color-text-inverse;
+    font-weight: $font-weight-semibold;
+    @include text-ellipsis;
+  }
+}
+
+.boardTitle {
+  max-width: calc(-9rem + 100vw);
+  margin: 0;
+  padding: $spacing-sm;
+  font-size: 1.3rem;
+  color: $color-text-inverse;
+  font-weight: $font-weight-semibold;
+  @include text-ellipsis;
+}
+
+.boardTitleInput {
+  max-width: calc(-9rem + 100vw);
+  margin: 0;
+  padding: $spacing-sm;
+  font-size: 1.3rem;
+  font-weight: $font-weight-semibold;
+  @include text-ellipsis;
+  color: $color-rgb-primary;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 100vw;
+  padding: 0 $spacing-lg $spacing-lg;
+  overflow: auto;
+}
+
+.addColumnForm {
+  @include flex-center;
+  justify-content: flex-start;
+  gap: $spacing-sm;
+  padding: $spacing-sm;
+  background: $color-gray-50;
+  border-radius: $radius-md;
+}
+
+.button {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: $font-size-lg;
+  color: $color-text-inverse;
+  text-align: left;
+  border-radius: $radius-sm;
+  background-color: rgba(0, 0, 0, 0.12);
+  transition: background-color $transition-base $transition-ease;
+  cursor: pointer;
+  border: transparent;
+}
+
+.input {
+  flex: 1;
+  padding: $spacing-sm;
+  border: 1px solid $color-border-primary;
+  border-radius: $radius-md;
+  font-size: $font-size-base;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+  }
+}

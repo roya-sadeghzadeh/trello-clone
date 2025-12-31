@@ -1,0 +1,62 @@
+@import '../../../../../styles/index';
+
+.columnItem {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  max-height: 83vh;
+  width: $width-column;
+  margin: 0 $spacing-sm;
+  background-color: $color-bg-column;
+  border-radius: $radius-sm;
+
+  .header {
+    padding: $spacing-sm 0.7rem 0 $spacing-sm;
+    width: 100%;
+    @include flex-between;
+    gap: $spacing-xs;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    .dragHandle {
+      @include flex-center;
+      padding: $spacing-xs;
+      background: transparent;
+      border: none;
+      border-radius: $radius-md;
+      color: $color-text-secondary;
+      flex-shrink: 0;
+      transition: background-color $transition-base;
+      cursor: inherit;
+
+      &:hover {
+        background-color: $color-bg-hover;
+        color: $color-text-primary;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .columnName {
+      width: 100%;
+      padding: $spacing-xs $spacing-sm;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      @include text-ellipsis;
+    }
+  }
+
+  .columnsContainer {  
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}

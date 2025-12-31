@@ -1,0 +1,67 @@
+@import '../../../../../styles/index';
+
+.button {
+  text-align: left;
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-base;
+  color: $color-text-secondary;
+  transition: $transition-base $transition-ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-text-primary;
+    background-color: rgba(9, 30, 66, 0.13);
+  }
+}
+
+.addCardContainer {
+  padding: $spacing-sm 0;
+}
+
+.addCardForm {
+  @include flex-column;
+  gap: $spacing-sm;
+  padding: 0 $spacing-sm;
+}
+
+.actions {
+  @include flex-center;
+  justify-content: flex-start;
+  gap: $spacing-sm;
+}
+
+.addButton {
+  padding: $spacing-sm $spacing-md;
+  border: none;
+  border-radius: $radius-sm;
+  background-color: $color-button-secondary;
+  color: $color-rgb-primary;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: background-color $transition-base $transition-ease;
+
+  &:hover {
+    background-color: $color-button-secondary-hover;
+  }
+}
+
+.closeButton {
+  padding: $spacing-sm;
+  color: $color-text-secondary;
+  cursor: pointer;
+  transition: color $transition-fast $transition-ease;
+  background: transparent;
+  border: none;
+  border-radius: $radius-sm;
+
+  &:hover {
+    background-color: $color-button-secondary-hover;
+  }
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}

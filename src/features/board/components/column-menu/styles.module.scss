@@ -1,0 +1,171 @@
+.menuContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.menuButton {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: rgba(9, 30, 66, 0.08);
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.menuDropdown {
+  position: absolute;
+  top: 2rem;
+  left: calc(100% - 2rem);
+  width: 17rem;
+  background-color: #F4F5F7;
+  border-radius: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0.125rem 0.125rem 0.5rem;
+  z-index: 10;
+
+  .menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem;
+    border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+    gap: 0.5rem;
+
+    .backButton {
+      color: rgb(107, 119, 140);
+      font-size: 1rem;
+      width: 1.5em;
+      height: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: color 0.1s ease-in;
+
+      &:hover {
+        color: rgb(46, 126, 175);
+      }
+    }
+
+    .menuTitle {
+      font-size: 1em;
+      color: rgb(107, 119, 140);
+      margin: 0;
+      font-weight: normal;
+      flex: 1;
+      text-align: center;
+    }
+
+    .closeButton {
+      color: rgb(107, 119, 140);
+      font-size: 1rem;
+      width: 1.5em;
+      height: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: color 0.1s ease-in;
+
+      &:hover {
+        color: rgb(46, 126, 175);
+      }
+    }
+  }
+
+  .menuContent {
+    padding: 0.5rem 0;
+  }
+
+  .menuItem {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-weight: 700;
+    color: rgb(23, 43, 77);
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+
+    &:hover {
+      color: rgb(255, 255, 255);
+      background-color: rgb(46, 126, 175);
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .confirmDialog {
+    padding: 0px 0.5rem;
+
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: rgb(64, 66, 75);
+    }
+
+    button {
+      margin-right: auto;
+    }
+  }
+
+  .dialogActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+
+    button {
+      padding: 0.4rem 0.75rem;
+      border: none;
+      border-radius: 0.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in;
+    }
+
+    .dangerButton {
+      background-color: #de350b;
+      color: white;
+
+      &:hover {
+        background-color: #e55348;
+      }
+    }
+  }
+}
+
+.menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

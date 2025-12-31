@@ -1,0 +1,58 @@
+@import '../../../../../styles/index';
+
+.cardItem {
+  padding: 0.6rem;
+  background-color: $color-bg-primary;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-sm;
+  cursor: pointer;
+  transition: background-color $transition-base $transition-ease;
+
+  &:hover {
+    background-color: $color-gray-50;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: $font-weight-medium;
+    color: $color-rgb-primary;
+    word-wrap: break-word;
+  }
+
+  .description {
+    font-size: $font-size-base;
+    color: $color-rgb-primary;
+    word-break: break-word;
+    margin-bottom: $spacing-sm;
+  }
+
+  .commentsSection {
+    margin-top: $spacing-sm;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .commentButton {
+    padding: $spacing-xs 0.6rem;
+    border-radius: $radius-sm;
+    background-color: $color-bg-column;
+    color: $color-text-primary;
+    font-size: $font-size-xs;
+    cursor: pointer;
+    transition: background-color $transition-base $transition-ease;
+
+    &:hover {
+      background-color: $color-gray-300;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .commentCount {
+    font-weight: $font-weight-medium;
+  }
+}

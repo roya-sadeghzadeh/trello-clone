@@ -1,0 +1,134 @@
+@import '../../../../../styles/index';
+
+.cardModal {
+  width: $width-modal;
+  max-width: 90vw;
+  max-height: 80vh;
+  padding: $spacing-lg;
+  border-radius: $radius-lg;
+  background-color: $color-bg-primary;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-xl;
+
+  @media (max-width: 640px) {
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+}
+
+.modalHeader {
+  @include flex-between;
+  margin-bottom: $spacing-md;
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: $font-size-lg;
+  color: $color-text-primary;
+  font-weight: $font-weight-normal;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  width: 1.2rem;
+  cursor: pointer;
+  color: $color-text-secondary;
+
+  &:hover {
+    color: $color-text-dark;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.modalContent {
+  flex: 1;
+  overflow-y: auto;
+
+  @include custom-scrollbar();
+}
+
+.section {
+  margin-bottom: $spacing-2xl;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin: 0 0 $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.addCommentForm {
+  margin-top: $spacing-md;
+  display: flex;
+  flex-direction: column;
+}
+
+.addCommentButton {
+  align-self: flex-end;
+  padding: 0.45rem $spacing-md;
+  border-radius: $radius-sm;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+  margin-bottom: 2px;
+  box-shadow: none;
+}
+
+.commentsList {
+  flex: 1 1 0%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+
+  @include custom-scrollbar();
+}
+
+.comment {
+  list-style: none;
+  padding: $spacing-sm;
+  background-color: $color-gray-50;
+  border-radius: $radius-sm;
+  margin-bottom: 0.4rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.commentHeader {
+  margin-bottom: $spacing-xs;
+  font-size: $font-size-xs;
+  color: $color-rgb-tertiary;
+}
+
+.commentTextarea {
+  resize: vertical;
+  height: $height-min-card;
+  min-height: $height-min-card;
+  padding: 0.6rem;
+  border-radius: $radius-sm;
+  border: 1px solid $color-border-primary;
+  font-size: $font-size-sm;
+  margin-bottom: 0.4rem;
+  background-color: $color-bg-primary;
+  box-shadow: none;
+}
