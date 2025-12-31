@@ -8,7 +8,7 @@ export async function generateMetadata({
   params: { id: string };
 }): Promise<Metadata> {
   return {
-    title: `Board - Trello Clone`,
+    title: `Board ${params.id} - Trello Clone`,
     description: 'Manage your tasks with this Kanban board',
   };
 }
