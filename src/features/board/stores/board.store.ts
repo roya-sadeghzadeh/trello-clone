@@ -82,7 +82,6 @@ export const useBoardStore = create<BoardStore>((set, get) => {
 
   hydrate: () => {
     const persistedState = loadState();
-    console.log('Hydrating board store with persisted state:', persistedState);
     const initialState = deserializeState(persistedState);
     const defaultState = createDefaultState();
 
